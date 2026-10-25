@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "borderlessmining",
+  "version": "${version}",
+
+  "name": "Borderless Mining (Unofficial 1.21.1 Port)",
+  "description": "Unofficial Fabric 1.21.1 port. Adds borderless fullscreen, an in-game toggle, and configuration controls.",
+  "authors": [
+    "JustHari01 (port)",
+    "comp500 (original mod)"
+  ],
+
+  "license": "MIT",
+  "icon": "assets/borderlessmining/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "modmenu" : [
+      "link.infra.borderlessmining.config.ModMenuCompat"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "borderlessmining.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "accessWidener": "borderlessmining.accesswidener",
+
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "fabric-resource-loader-v0": "*",
+    "minecraft": "~1.21.1"
+  },
+  "suggests": {
+    "modmenu": ">=11.0.5"
+  }
+}
